@@ -13,7 +13,8 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.anonymous.Hallen-app2.0"
     },
     "android": {
       "adaptiveIcon": {
@@ -23,6 +24,14 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "expo-font",
+        {
+          "fonts": ["/assets/fonts/Liter-Regular.ttf"]
+        }
+      ]
+    ]
   }
 }

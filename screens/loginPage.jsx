@@ -1,10 +1,14 @@
 import React from "react";
+import { useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
-import { SafeAreaView } from "react-native";
+import { useFonts } from "expo-font";
+import * as SplashScreen from "expo-splash-screen";
+
+
 
 const OutlinedText = ({ text }) => {
   return (
-    <View style={styles.textContainer}>
+    <View style={styles.outlineContainer}>
       {/* Outline layers */}
       <Text style={[styles.outline, { top: -2, left: -2 }]}>{text}</Text>
       <Text style={[styles.outline, { top: -2, left: 2 }]}>{text}</Text>
@@ -17,49 +21,43 @@ const OutlinedText = ({ text }) => {
   );
 };
 
-function Login() {
+function LoginPage() {
   return (
-    <View style={styles.textContainer}>
-      <OutlinedText text="HUDDINGE" />
-      <OutlinedText text="HALLEN" />
-      <View style={styles.box}></View>
+    <View style={styles.container}>
+      <View style={styles.textContainer}>
+        <OutlinedText text="HUDDINGE" />
+        <OutlinedText text="HALLEN" />
+      </View>
+      <View style={styles.loginContainer}>{/* Login form */}</View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  box: {
+  container: {
     flex: 1,
-    width: 50,
-    height: 50,
-    backroundColor: "black",
+    flexDirection: "column",
+    backgroundColor: "#d3d3d3",
+    justifyContent: "center",
+  },
+  loginContainer: {
+    flex: 8,
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
   },
   textContainer: {
-    display: "block",
-    position: "relative",
-    backgroundColor: "black",
+    flex: 1,
+    flexDirection: "column",
+    justifyContent: "start",
     alignItems: "center",
   },
   title: {
-    flex: 0,
-    alignItems: "center",
-    justifyContent: "start",
     fontSize: 35,
     fontWeight: 900,
     color: "#0384fc",
-    border: "2px solid black",
-  },
-  title2: {
-    alignItems: "center",
-    borderWidth: 2,
-    borderColor: "black",
-    backgroundColor: "red",
-    justifyContent: "start",
-    padding: 0,
-    fontSize: 35,
-    fontWeight: 800,
-    color: "#0384fc",
     textAlign: "center",
+    position: "relative",
   },
   outline: {
     fontSize: 35,
@@ -70,4 +68,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Login;
+export default LoginPage;
