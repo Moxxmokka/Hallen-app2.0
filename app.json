@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Hallen-app2.0",
-    "slug": "Hallen-app2.0",
+    "slug": "hallen",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -14,7 +14,10 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.anonymous.Hallen-app2.0"
+      "bundleIdentifier": "com.anonymous.Hallen-app2.0",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -29,9 +32,17 @@
       [
         "expo-font",
         {
-          "fonts": ["/assets/fonts/Liter-Regular.ttf"]
+          "fonts": [
+            "./assets/fonts/Liter-Regular.ttf"
+          ]
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "36fdd556-96b3-49c0-8e2b-1a9d916eccf4"
+      }
+    },
+    "owner": "hampusku"
   }
 }

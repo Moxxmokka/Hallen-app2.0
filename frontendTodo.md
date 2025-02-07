@@ -5,7 +5,7 @@
    - [ ]Redux Toolkit (@reduxjs/toolkit, react-redux) for state management
    - [ ]React Native Paper (for UI components)
    - [x]Axios (for making API calls)
-   - [ ]React Native AsyncStorage or React Native Keychain (for secure token storage)
+   - [x]React Native AsyncStorage or React Native Keychain (for secure token storage)
    - [ ]React Native Gesture Handler (for smooth navigation and interactions)
    - [ ]React Native Reanimated (for smooth animations)
 2. Authentication
